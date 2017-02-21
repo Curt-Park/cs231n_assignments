@@ -10,7 +10,14 @@ Thanks for the people who dedicate their life to widespread knowledge, which mak
 - Q4: Two-Layer Neural Network (25 points)
 - Q5: Higher Level Representations: Image Features (10 points)
 
+###[Assignment2](http://cs231n.github.io/assignments2016/assignment2/)
+- Q1: Fully-connected Neural Network (30 points)
+- Q2: Batch Normalization (30 points)
+- Q3: Dropout (10 points)
+- Q4: ConvNet on CIFAR-10 (30 points) - not done
+
 #Link
 - [Course Home](http://cs231n.stanford.edu/)
 - [Syllabus](http://cs231n.stanford.edu/syllabus.html)
 - [Lecture Note](http://cs231n.github.io/)
+
