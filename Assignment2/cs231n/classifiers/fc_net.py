@@ -318,6 +318,7 @@ class FullyConnectedNet(object):
         loss += 0.5*self.reg*np.sum(self.params['W%d'%(i)]**2)
         grads['W%d'%(i)] += self.reg*self.params['W%d'%(i)]
     
+    grads['dFC'] = cache['dl1']    
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
