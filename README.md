@@ -14,7 +14,7 @@ Thanks for the people who dedicate their life to widespread knowledge, which mak
 - Q1: Fully-connected Neural Network (30 points)
 - Q2: Batch Normalization (30 points)
 - Q3: Dropout (10 points)
-- Q4: ConvNet on CIFAR-10 (30 points) - not done
+- Q4: ConvNet on CIFAR-10 (30 points)
 
 ### [Assignment3](http://cs231n.github.io/assignments2016/assignment3/) - not done
 - Q1: Image Captioning with Vanilla RNNs (40 points)
