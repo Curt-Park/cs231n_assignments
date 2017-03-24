@@ -15,14 +15,13 @@ class MyConvNet(object):
                num_classes=10, weight_scale=1e-3, reg=0.0,
                dropout=0, use_batchnorm=False, dtype=np.float32, seed=None):
 
-    self.use_dropout = dropout > 0
     self.reg = reg
-    self.num_convs = len(conv_params)
-    self.dtype = dtype
     self.use_batchnorm = use_batchnorm
+    self.num_convs = len(conv_params)
     self.conv_params = conv_params
     self.pool_params = pool_params
     self.params = {}
+    self.dtype = dtype
  
     F = 0
     C,H,W = input_dim
@@ -63,18 +62,16 @@ class MyConvNet(object):
                                 reg=self.reg,
                                 dtype=self.dtype,
                                 seed=seed)
-    self.params.update(self.fc.params)
+    self.params.update(self.fc.params) # To update all weights and bias of FC
                                 
     # Batch Normalization Parameter
     self.bn_params = []
     if self.use_batchnorm:
       self.bn_params = [{'mode': 'train'} for i in xrange(self.num_convs)]
-      # For Conv layers
       gammas = {'conv_gamma'+str(i+1): np.ones(conv_params[i]['filter_num'])
                     for i in xrange(self.num_convs)}
       betas = {'conv_beta'+str(i+1): np.zeros(conv_params[i]['filter_num'])
                     for i in xrange(self.num_convs)}
-
       self.params.update(gammas)
       self.params.update(betas)
     
@@ -95,6 +92,7 @@ class MyConvNet(object):
     cache = {}
     x = X
     for i in xrange(self.num_convs):
+      # Whether to use Batch Normalization
       bn_param = (self.params['conv_gamma'+str(i+1)],\
                   self.params['conv_beta'+str(i+1)],\
                   self.bn_params[i]) \
