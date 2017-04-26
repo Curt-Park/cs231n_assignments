@@ -139,10 +139,10 @@ class CaptioningRNN(object):
     # (1)
     h0 = features.dot(W_proj)+b_proj
     # (2)
-    out_word_embedd, cache_word_embedd = word_embedding_forward(captions_in, W_embed)
+    out_word_embed, cache_word_embed = word_embedding_forward(captions_in, W_embed)
     # (3)
     if self.cell_type is 'rnn':
-      h, cache_rnn = rnn_forward(out_word_embedd, h0, Wx, Wh, b)
+      h, cache_rnn = rnn_forward(out_word_embed, h0, Wx, Wh, b)
     # (4)
     out_temp_affine, cache_temp_affine = temporal_affine_forward(h, W_vocab, b_vocab)
     # (5)
@@ -154,10 +154,10 @@ class CaptioningRNN(object):
       temporal_affine_backward(d_out_temp_affine, cache_temp_affine)
     # (3)
     if self.cell_type is 'rnn':
-      d_out_work_embedd, d_h0, grads['Wx'], grads['Wh'], grads['b'] = \
+      d_out_word_embed, d_h0, grads['Wx'], grads['Wh'], grads['b'] = \
         rnn_backward(dh, cache_rnn)
     # (2)
-    grads['W_embed'] = word_embedding_backward(d_out_work_embedd, cache_word_embedd)
+    grads['W_embed'] = word_embedding_backward(d_out_word_embed, cache_word_embed)
     # (1)
     grads['b_proj'] = d_h0.sum(axis=0)
     grads['W_proj'] = features.T.dot(d_h0)
@@ -222,7 +222,22 @@ class CaptioningRNN(object):
     # functions; you'll need to call rnn_step_forward or lstm_step_forward in #
     # a loop.                                                                 #
     ###########################################################################
-    pass
+    # (1)
+    word_prev = W_embed[self._start,:]*np.ones((N, W_embed.shape[1]))
+    # (2)
+    h_prev = features.dot(W_proj)+b_proj
+    captions[:, 0] = self._start
+    for t in xrange(1, max_length):
+      h_t, _ = rnn_step_forward(word_prev, h_prev, Wx, Wh, b)
+      # (3)
+      scores = h_t.dot(W_vocab) + b_vocab
+      # (4)
+      word_t = np.argmax(scores, axis=1)
+      captions[:, t] = word_t
+      
+      word_prev = W_embed[word_t, :]
+      h_prev = h_t
+    
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
