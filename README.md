@@ -16,11 +16,11 @@ Thanks for the people who dedicate their life to widespread knowledge, which mak
 - Q3: Dropout (10 points)
 - Q4: ConvNet on CIFAR-10 (30 points)
 
-### [Assignment3](http://cs231n.github.io/assignments2016/assignment3/) - not done
+### [Assignment3](http://cs231n.github.io/assignments2016/assignment3/)
 - Q1: Image Captioning with Vanilla RNNs (40 points)
 - Q2: Image Captioning with LSTMs (35 points)
-- Q3: Image Gradients: Saliency maps and Fooling Images (10 points)
-- Q4: Image Generation: Classes, Inversion, DeepDream (15 points)
+- Q3: Image Gradients: Saliency maps and Fooling Images (10 points) - not done
+- Q4: Image Generation: Classes, Inversion, DeepDream (15 points) - not done
 
 # Link
 - [Course Home](http://cs231n.stanford.edu/)
