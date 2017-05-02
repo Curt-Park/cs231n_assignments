@@ -19,7 +19,7 @@ Thanks for the people who dedicate their life to widespread knowledge, which mak
 ### [Assignment3](http://cs231n.github.io/assignments2016/assignment3/)
 - Q1: Image Captioning with Vanilla RNNs (40 points)
 - Q2: Image Captioning with LSTMs (35 points)
-- Q3: Image Gradients: Saliency maps and Fooling Images (10 points) - not done
+- Q3: Image Gradients: Saliency maps and Fooling Images (10 points)
 - Q4: Image Generation: Classes, Inversion, DeepDream (15 points) - not done
 
 # Link
