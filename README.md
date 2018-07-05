@@ -25,7 +25,7 @@ Thanks for the people who dedicate their life to widespread knowledge, which mak
 - Q3: Network Visualization: Saliency maps, Class Visualization, and Fooling Images (15 points) - **Done both in Pytorch and Tensorflow**
 - Q4: Style Transfer (15 points) - **Done both in Pytorch and Tensorflow**
 - Q5: Generative Adversarial Networks (15 points) - **Done in Tensorflow only**
-  - Extra Credit: InfoGAN (TF)
+  - Extra Credit: InfoGAN (TF), WGAN-GP (TF)
 
 
 
