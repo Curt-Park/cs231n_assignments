@@ -1,0 +1,7 @@
+build/*
+im2col_cython.c
+im2col_cython.so
+datasets/coco_captioning*
+datasets/squeezenet.*
+datasets/imagenet_val_25.npz
+datasets/MNIST_data
