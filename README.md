@@ -1,7 +1,5 @@
 Repository for programming assignments of CS231n: Convolutional Neural Networks for Visual Recognition (2016 & 2017).
 
-Thanks for the people who dedicate their life to widespread knowledge, which makes the world better.
-
 # 2017
 ### [Assignment1](http://cs231n.github.io/assignments2017/assignment1/)
 - Q1: k-Nearest Neighbor classifier (20 points)
