@@ -17,15 +17,16 @@ Thanks for the people who dedicate their life to widespread knowledge, which mak
 - Q3: Dropout (10 points)
 - Q4: Convolutional Networks (30 points)
 - Q5: PyTorch / TensorFlow on CIFAR-10 (10 points) - **Done both in Pytorch and Tensorflow**
-- Q6: Do something extra! (up to +10 points) - **Built VGG-like networks which acheive 79.4% and 78.4% on CIFAR-10 test set in Pytorch and Tensorflow respectively**
+- Q6: Do something extra! (up to +10 points) - **Done both in Pytorch and Tensorflow**
+  - Extra Credit: VGG-like networks which acheive 79.4% and 78.4% on CIFAR-10 test set in Pytorch and Tensorflow respectively
 
 ### [Assignment3](http://cs231n.github.io/assignments2017/assignment3/)
 - Q1: Image Captioning with Vanilla RNNs (25 points)
 - Q2: Image Captioning with LSTMs (30 points)
 - Q3: Network Visualization: Saliency maps, Class Visualization, and Fooling Images (15 points) - **Done both in Pytorch and Tensorflow**
 - Q4: Style Transfer (15 points) - **Done both in Pytorch and Tensorflow**
-- Q5: Generative Adversarial Networks (15 points) - **Done in Tensorflow only**
-  - Extra Credit: InfoGAN (TF), WGAN-GP (TF)
+- Q5: Generative Adversarial Networks (15 points) - **Done both in Pytorch and Tensorflow**
+  - Extra Credit: InfoGAN (TF), WGAN-GP (TF), WGAN-GP (Pytorch)
 
 
 
